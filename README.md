@@ -82,3 +82,34 @@ jobs:
             "audit_type": "${{ steps.parse_command.outputs.audit_type }}",
             "analysis_mode": "${{ steps.parse_command.outputs.analysis_mode }}"
           }'
+
+```
+
+### Step 3: Add the Secret
+
+For the action to securely communicate with our backend, you need to add a secret to your repository.
+
+1.  In your repository, go to **Settings > Secrets and variables > Actions**.
+2.  Click the **New repository secret** button.
+3.  **Name:** `PRISM_ACTION_SECRET`
+4.  **Value:** Contact us at `votre-email@exemple.com` to get your private key. 
+    *(Note: This is a placeholder for how you will onboard users in the future).*
+
+That's it! Solidity Prism is now installed.
+
+## Usage
+
+To trigger an audit, simply go to any open Pull Request and post a comment with one of the following commands:
+
+| Command                 | Description                                                  |
+| ----------------------- | ------------------------------------------------------------ |
+| `/audit`                | Runs a **full** audit (security + gas) in **standard** mode. |
+| `/audit security`       | Runs a **security only** audit in **standard** mode.         |
+| `/audit gas`            | Runs a **gas only** audit in **standard** mode.              |
+| `/audit full deep`      | Runs a **full** audit in **deep** analysis mode.             |
+| `/audit security fast`  | Runs a **security only** audit in **fast** analysis mode.    |
+
+
+## Support
+
+If you have any questions, encounter issues, or have a feature request, please [open an issue](https://github.com/SolidityPrism/documentation/issues) in this repository.
