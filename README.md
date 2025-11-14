@@ -77,6 +77,7 @@ jobs:
           -H "X-Action-Secret: ${{ secrets.PRISM_ACTION_SECRET }}" \
           -d '{
             "repository_id": "${{ github.event.repository.id }}",
+            "repository_url": "${{ github.event.repository.git_url }}",
             "pr_number": "${{ github.event.issue.number }}",
             "commit_sha": "${{ steps.get_sha.outputs.sha }}",
             "comments_url": "${{ github.event.issue.comments_url }}",
