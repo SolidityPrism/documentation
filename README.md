@@ -45,6 +45,8 @@ jobs:
   run-audit:
     # This job only runs when a PR comment starts with "/audit"
     if: github.event.issue.pull_request && startsWith(github.event.comment.body, '/audit')
+    permissions:
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
       # Step 1: Parse the command from the comment (e.g., /audit gas deep)
