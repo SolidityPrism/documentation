@@ -108,11 +108,9 @@ To trigger an audit, simply go to any open Pull Request and post a comment with 
 
 | Command                 | Description                                                  |
 | ----------------------- | ------------------------------------------------------------ |
-| `/audit`                | Runs a **full** audit (security + gas) in **standard** mode. |
-| `/audit security`       | Runs a **security only** audit in **standard** mode.         |
-| `/audit gas`            | Runs a **gas only** audit in **standard** mode.              |
-| `/audit full deep`      | Runs a **full** audit in **deep** analysis mode.             |
-| `/audit security fast`  | Runs a **security only** audit in **fast** analysis mode.    |
+| `/audit`                | Runs a **full** audit (security + gas). |
+| `/audit security`       | Runs a **security only** audit.         |
+| `/audit gas`            | Runs a **gas only** audit.              |
 
 
 ## Support
