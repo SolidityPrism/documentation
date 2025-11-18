@@ -94,24 +94,29 @@ jobs:
 
 For the action to securely communicate with our backend, you need to add a secret to your repository.
 
-1.  In your repository, go to **Settings > Secrets and variables > Actions**.
-2.  Click the **New repository secret** button.
-3.  **Name:** `PRISM_ACTION_SECRET`
-4.  **Value:** Contact us at `votre-email@exemple.com` to get your private key. 
-    *(Note: This is a placeholder for how you will onboard users in the future).*
+1.  Log in to your account on **solidityprism.dev**.
+2.  Go to your **Dashboard** or **Account Settings** page.
+3.  You will find your unique `PRISM_ACTION_SECRET` key there. Copy it.
+4.  In your GitHub repository, go to **Settings > Secrets and variables > Actions**.
+5.  Click the **New repository secret** button.
+6.  **Name:** `PRISM_ACTION_SECRET`
+7.  **Value:** Paste the key you copied from your dashboard.
 
 That's it! Solidity Prism is now installed.
 
 ## Usage
 
-To trigger an audit, simply go to any open Pull Request and post a comment with one of the following commands:
+To trigger an audit, go to any open Pull Request and post a comment with one of the following commands. You can also specify the analysis depth: `fast`, `standard` (default), or `deep`.
 
 | Command                 | Description                                                  |
 | ----------------------- | ------------------------------------------------------------ |
-| `/audit`                | Runs a **full** audit (security + gas). |
-| `/audit security`       | Runs a **security only** audit.         |
-| `/audit gas`            | Runs a **gas only** audit.              |
+| `/audit`                | Runs a **full** audit (security + gas) in **standard** mode. |
+| `/audit security`       | Runs a **security only** audit in **standard** mode.         |
+| `/audit gas`            | Runs a **gas only** audit in **standard** mode.              |
+| `/audit security deep`  | Runs a **security only** audit in **deep** mode.             |
+| `/audit gas fast`       | Runs a **gas only** audit in **fast** mode.                  |
 
+The analysis depth always comes last in the command.
 
 ## Support
 
