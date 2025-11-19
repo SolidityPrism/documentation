@@ -83,7 +83,7 @@ jobs:
             "pr_number": "${{ github.event.issue.number }}",
             "commit_sha": "${{ steps.get_sha.outputs.sha }}",
             "comments_url": "${{ github.event.issue.comments_url }}",
-            "github_token": "${{ secrets.GITHUB_TOKEN }}",
+           "github_token": "${{ github.token }}",
             "audit_type": "${{ steps.parse_command.outputs.audit_type }}",
             "analysis_mode": "${{ steps.parse_command.outputs.analysis_mode }}"
           }'
