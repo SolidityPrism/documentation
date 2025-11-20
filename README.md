@@ -8,7 +8,8 @@ Welcome to the official documentation for Solidity Prism. Here you will find eve
 1. [How It Works](#how-it-works)
 2. [Installation](#installation)
 3. [Usage](#usage)
-4. [Support](#support)
+4. [Uninstalling](#uninstalling)
+5. [Support](#support)
 
 ---
 
@@ -117,6 +118,32 @@ To trigger an audit, go to any open Pull Request and post a comment with one of 
 | `/audit gas fast`       | Runs a **gas only** audit in **fast** mode.                  |
 
 The analysis depth always comes last in the command.
+
+## Uninstalling
+
+If you want to stop using Solidity Prism or revoke its access to your repository, follow these steps:
+
+### Step 1: Delete the Workflow File
+
+1. In your repository, navigate to `.github/workflows/solidity_prism.yml`
+2. Delete this file and commit the change
+3. This will immediately stop the action from running on future Pull Requests
+
+### Step 2: Remove the Secret (Optional but Recommended)
+
+1. Go to your repository **Settings → Secrets and variables → Actions**
+2. Find `PRISM_ACTION_SECRET` in the list
+3. Click the **Remove** button next to it
+4. Confirm deletion
+
+### Step 3: Deactivate Repository in Dashboard (Optional)
+
+1. Log in to your **Solidity Prism Dashboard** on [solidityprism.dev](https://solidityprism.dev)
+2. Go to your **Repositories** page
+3. Find the repository you want to deactivate
+4. Click **Deactivate** or **Remove**
+
+**Note:** Deleting the workflow file is sufficient to stop audits. The remaining steps ensure complete cleanup.
 
 ## Support
 
