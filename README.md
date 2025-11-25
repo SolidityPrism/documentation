@@ -96,7 +96,7 @@ jobs:
 For the action to securely communicate with our backend, you need to activate your repository and add a secret to GitHub.
 
 1.  Log in to your account on **[solidityprism.dev/dashboard](https://solidityprism.dev/dashboard)**.
-
+2.  Find your repository in the list.
 > **⚠️ Don't see your Organization's repositories?**
 >
 > If you are part of an organization, GitHub often restricts third-party access by default. To show your repositories:
@@ -107,8 +107,6 @@ For the action to securely communicate with our backend, you need to activate yo
 > 5. Click **Grant** (or **Request**) next to your organization's name.
 >
 > Refresh your dashboard, and the repositories will appear.
-
-2.  Find your repository in the list.
 3.  Click the **Activate & Buy Credits** button (if not already active).
 4.  Once the repository status is **Active**, click the purple **Key** button next to it.
 5.  Copy the displayed `PRISM_ACTION_SECRET`.
