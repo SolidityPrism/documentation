@@ -95,7 +95,7 @@ jobs:
 
 For the action to securely communicate with our backend, you need to activate your repository and add a secret to GitHub.
 
-1.  Log in to your account on **[solidityprism.dev/dashboard](https://solidityprism.dev/dashboard)**.
+1.  Log in to your account on **[solidityprism.dev/dashboard](https://solidityprism.dev/dashboard)**
 2.  Find your repository in the list.
 > **⚠️ Don't see your Organization's repositories?**
 >
