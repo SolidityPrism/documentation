@@ -145,17 +145,16 @@ If you want to stop using Solidity Prism or revoke its access to your repository
 
 **Note:** Deleting the workflow file is sufficient to stop audits. The remaining steps ensure complete cleanup.
 
-### Note for Organization Users
-
-If you are setting this up for a GitHub Organization, you may need to grant access to the Solidity Prism application.
-
-1. Go to your Organization's **Settings** on GitHub.
-2. Select **Third-party Access** > **OAuth app policy**.
-3. Locate **Solidity Prism** in the list and click **Grant**.
-
-Alternatively, you can grant access via your personal settings: **Settings > Applications > Authorized OAuth Apps > Solidity Prism > Organization access**.
-
-Without this permission, your organization's repositories will not appear in the Solidity Prism Dashboard.
+> **⚠️ Don't see your Organization's repositories?**
+>
+> If you are part of an organization, GitHub might block access by default. To fix this:
+> 1. Go to your **Personal GitHub Settings** (click your avatar > Settings).
+> 2. On the left sidebar, click **Applications** > **Authorized OAuth Apps**.
+> 3. Click on **Solidity Prism**.
+> 4. Scroll down to the **Organization access** section.
+> 5. Click **Grant** (or **Request**) next to your organization's name.
+>
+> Once granted, refresh your Solidity Prism dashboard, and your repositories will appear.
 
 ## Support
 
