@@ -109,6 +109,7 @@ For the action to securely communicate with our backend, you need to activate yo
 > Refresh your dashboard, and the repositories will appear.
 3.  Click the **Activate & Buy Credits** button (if not already active).
 4.  Once the repository status is **Active**, click the purple **Key** button next to it.
+![Activated Repository and Key Button](images/repo%20activated.png)
 5.  Copy the displayed `PRISM_ACTION_SECRET`.
 6.  In your GitHub repository, go to **Settings > Secrets and variables > Actions**.
 7.  Click the **New repository secret** button.
