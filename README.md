@@ -91,19 +91,33 @@ jobs:
 
 ```
 
-### Step 3: Add the Secret
+### Step 3: Activate Repository & Add Secret
 
-For the action to securely communicate with our backend, you need to add a secret to your repository.
+For the action to securely communicate with our backend, you need to activate your repository and add a secret to GitHub.
 
-1.  Log in to your account on **solidityprism.dev**.
-2.  Go to your **Dashboard** or **Account Settings** page.
-3.  You will find your unique `PRISM_ACTION_SECRET` key there. Copy it.
-4.  In your GitHub repository, go to **Settings > Secrets and variables > Actions**.
-5.  Click the **New repository secret** button.
-6.  **Name:** `PRISM_ACTION_SECRET`
-7.  **Value:** Paste the key you copied from your dashboard.
+1.  Log in to your account on **[solidityprism.dev/dashboard](https://solidityprism.dev/dashboard)**.
 
-That's it! Solidity Prism is now installed.
+> **⚠️ Don't see your Organization's repositories?**
+>
+> If you are part of an organization, GitHub often restricts third-party access by default. To show your repositories:
+> 1. Go to your **Personal GitHub Settings** (click your avatar top-right > **Settings**).
+> 2. On the left sidebar, click **Applications** (at the bottom) > **Authorized OAuth Apps**.
+> 3. Click on **Solidity Prism**.
+> 4. Scroll down to the **Organization access** section.
+> 5. Click **Grant** (or **Request**) next to your organization's name.
+>
+> Refresh your dashboard, and the repositories will appear.
+
+2.  Find your repository in the list.
+3.  Click the **Activate & Buy Credits** button (if not already active).
+4.  Once the repository status is **Active**, click the purple **Key** button next to it.
+5.  Copy the displayed `PRISM_ACTION_SECRET`.
+6.  In your GitHub repository, go to **Settings > Secrets and variables > Actions**.
+7.  Click the **New repository secret** button.
+8.  **Name:** `PRISM_ACTION_SECRET`
+9.  **Value:** Paste the key you copied.
+
+That's it! Solidity Prism is now installed and ready to audit.
 
 ## Usage
 
@@ -138,23 +152,11 @@ If you want to stop using Solidity Prism or revoke its access to your repository
 
 ### Step 3: Deactivate Repository in Dashboard (Optional)
 
-1. Log in to your **Solidity Prism Dashboard** on [solidityprism.dev](https://solidityprism.dev)
-2. Go to your **Repositories** page
-3. Find the repository you want to deactivate
-4. Click **Deactivate** or **Remove**
+1. Log in to your **Solidity Prism Dashboard** on [solidityprism.dev](https://solidityprism.dev/dashboard)
+2. Find the repository you want to deactivate
+3. Click **Deactivate** or **Remove**
 
 **Note:** Deleting the workflow file is sufficient to stop audits. The remaining steps ensure complete cleanup.
-
-> **⚠️ Don't see your Organization's repositories?**
->
-> If you are part of an organization, GitHub might block access by default. To fix this:
-> 1. Go to your **Personal GitHub Settings** (click your avatar > Settings).
-> 2. On the left sidebar, click **Applications** > **Authorized OAuth Apps**.
-> 3. Click on **Solidity Prism**.
-> 4. Scroll down to the **Organization access** section.
-> 5. Click **Grant** (or **Request**) next to your organization's name.
->
-> Once granted, refresh your Solidity Prism dashboard, and your repositories will appear.
 
 ## Support
 
