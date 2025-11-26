@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solidity Prism Auditor - Install GitHub App</title>
+    <title>Solidity Prism Documentation</title>
     <style>
         * {
             margin: 0;
@@ -12,295 +12,642 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .container {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            max-width: 500px;
-            width: 100%;
-            padding: 40px;
-            text-align: center;
-        }
-
-        .logo {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 30px;
-            background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 40px;
-            color: white;
-            font-weight: bold;
-        }
-
-        h1 {
-            font-size: 28px;
-            color: #1a1a2e;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        .subtitle {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 40px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: #f5f5f5;
+            color: #333;
             line-height: 1.6;
         }
 
-        .loading-spinner {
-            width: 50px;
-            height: 50px;
-            border: 4px solid #f3f4f6;
-            border-top: 4px solid #7c3aed;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 30px;
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
         }
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .status-text {
-            font-size: 18px;
-            color: #1a1a2e;
-            margin: 20px 0;
-            font-weight: 500;
-        }
-
-        .info-box {
-            background: #f0f4ff;
-            border-left: 4px solid #7c3aed;
-            padding: 15px;
-            margin: 30px 0;
-            border-radius: 4px;
-            text-align: left;
-            font-size: 14px;
-            color: #4f46e5;
-        }
-
-        .info-box strong {
-            display: block;
-            margin-bottom: 8px;
-            color: #4f46e5;
-        }
-
-        .button-group {
-            display: flex;
-            gap: 12px;
-            margin-top: 30px;
-            flex-direction: column;
-        }
-
-        .btn {
-            padding: 14px 24px;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn-primary {
+        header {
             background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
             color: white;
-            box-shadow: 0 10px 25px rgba(124, 58, 237, 0.2);
+            padding: 60px 40px;
+            text-align: center;
         }
 
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 35px rgba(124, 58, 237, 0.3);
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            font-weight: 700;
         }
 
-        .btn-secondary {
-            background: #f3f4f6;
+        header p {
+            font-size: 18px;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 60px 40px;
+        }
+
+        h2 {
+            font-size: 32px;
             color: #1a1a2e;
-            border: 2px solid #e5e7eb;
+            margin: 50px 0 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #7c3aed;
+            font-weight: 700;
         }
 
-        .btn-secondary:hover {
-            background: #e5e7eb;
-            border-color: #d1d5db;
+        h2:first-of-type {
+            margin-top: 0;
         }
 
-        .timer {
-            font-size: 14px;
-            color: #999;
-            margin-top: 20px;
+        h3 {
+            font-size: 22px;
+            color: #333;
+            margin: 30px 0 20px;
+            font-weight: 600;
         }
 
-        .error-box {
-            background: #fee2e2;
-            border-left: 4px solid #dc2626;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
-            text-align: left;
-            font-size: 14px;
-            color: #991b1b;
-            display: none;
+        p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: #555;
         }
 
-        .footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #e5e7eb;
-            font-size: 12px;
-            color: #999;
-        }
-
-        .footer a {
+        a {
             color: #7c3aed;
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
-        .footer a:hover {
+        a:hover {
+            color: #6d28d9;
             text-decoration: underline;
+        }
+
+        .toc {
+            background: #f8f9fa;
+            border-left: 4px solid #7c3aed;
+            padding: 25px;
+            margin: 30px 0 40px;
+            border-radius: 8px;
+        }
+
+        .toc h3 {
+            margin-top: 0;
+            color: #7c3aed;
+        }
+
+        .toc ol {
+            margin: 15px 0 0 20px;
+        }
+
+        .toc li {
+            margin-bottom: 8px;
+        }
+
+        ol, ul {
+            margin: 15px 0 15px 25px;
+            color: #555;
+        }
+
+        li {
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+
+        code {
+            background: #f0f0f0;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 13px;
+            color: #d63384;
+        }
+
+        .code-box {
+            margin: 25px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+            background: #1e1e1e;
+        }
+
+        .code-header {
+            background: #2d2d2d;
+            color: #fff;
+            padding: 12px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            font-weight: 500;
+            border-bottom: 1px solid #444;
+        }
+
+        .code-lang {
+            color: #999;
+            font-size: 12px;
+        }
+
+        .copy-btn {
+            background: #7c3aed;
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .copy-btn:hover {
+            background: #6d28d9;
+            transform: translateY(-1px);
+        }
+
+        .copy-btn.copied {
+            background: #10b981;
+        }
+
+        pre {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            overflow-x: auto;
+            margin: 0;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        pre code {
+            background: none;
+            color: inherit;
+            padding: 0;
+            font-size: inherit;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        table th {
+            background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+            color: white;
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+            border: none;
+        }
+
+        table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid #e5e7eb;
+            color: #555;
+        }
+
+        table tr:last-child td {
+            border-bottom: none;
+        }
+
+        table tr:nth-child(even) {
+            background: #f9fafb;
+        }
+
+        table tr:hover {
+            background: #f0f4ff;
+        }
+
+        .blockquote {
+            background: #f0f4ff;
+            border-left: 4px solid #7c3aed;
+            padding: 18px 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+            color: #4f46e5;
+        }
+
+        .blockquote strong {
+            display: block;
+            margin-bottom: 12px;
+            color: #4f46e5;
+            font-size: 15px;
+        }
+
+        .blockquote p {
+            color: #4f46e5;
+            margin: 8px 0;
+            font-size: 14px;
+        }
+
+        .blockquote ol, .blockquote ul {
+            margin: 12px 0 0 20px;
+            color: #4f46e5;
+        }
+
+        .blockquote li {
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+
+        .note {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+            color: #155724;
+        }
+
+        .note strong {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid #e5e7eb;
+            margin: 40px 0;
+        }
+
+        footer {
+            background: #1a1a2e;
+            color: #fff;
+            text-align: center;
+            padding: 40px;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #7c3aed;
+        }
+
+        .step-list {
+            margin: 15px 0 15px 25px;
+        }
+
+        .step-list li {
+            margin-bottom: 12px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        strong {
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 30px 20px;
+            }
+
+            header {
+                padding: 40px 20px;
+            }
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            pre {
+                font-size: 12px;
+            }
+
+            table {
+                font-size: 13px;
+            }
+
+            table th, table td {
+                padding: 10px 12px;
+            }
+
+            .code-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .copy-btn {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="logo">H</div>
-        
-        <h1>Installing Solidity Prism Auditor</h1>
-        <p class="subtitle">Redirecting you to GitHub to install the app...</p>
+        <header>
+            <h1>Solidity Prism</h1>
+            <p>AI-Powered Smart Contract Auditing</p>
+        </header>
 
-        <div class="loading-spinner"></div>
+        <div class="content">
+            <p style="font-size: 16px; text-align: center; margin-bottom: 30px; color: #666;">
+                Welcome to the official documentation for Solidity Prism. Here you will find everything you need to install, configure, and use our AI-powered audit tool.
+            </p>
 
-        <p class="status-text" id="status">Opening GitHub App installation page...</p>
+            <!-- Table of Contents -->
+            <div class="toc">
+                <h3>Table of Contents</h3>
+                <ol>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#github-app-installation">GitHub App Installation</a></li>
+                    <li><a href="#workflow-installation">Workflow Installation</a></li>
+                    <li><a href="#usage">Usage</a></li>
+                    <li><a href="#uninstalling">Uninstalling</a></li>
+                    <li><a href="#support">Support</a></li>
+                </ol>
+            </div>
 
-        <div class="info-box">
-            <strong>✓ What happens next:</strong>
-            You'll be taken to GitHub to authorize Solidity Prism Auditor on your organization. This is a one-time setup.
+            <hr>
+
+            <!-- How It Works -->
+            <h2 id="how-it-works">How It Works</h2>
+            <p>Solidity Prism is a GitHub Action that runs as an automated code reviewer on your Pull Requests.</p>
+            <p>It does <strong>not</strong> run on every single push. Instead, you trigger it on demand by posting a comment on a Pull Request. This keeps your workflow clean and ensures audits are only run when you are ready.</p>
+            <p>Once triggered, the action sends your code to our secure backend for analysis and posts a summary report back as a comment.</p>
+
+            <hr>
+
+            <!-- GitHub App Installation -->
+            <h2 id="github-app-installation">GitHub App Installation</h2>
+
+            <div class="blockquote">
+                <strong>Important:</strong>
+                <p>The Solidity Prism Auditor GitHub App is installed <strong>just once per owner or organization</strong> – not per repository.</p>
+                <p>After installation, you can select which repositories in your organization (or under your GitHub account) will grant access to the app. You can always change the selection and add/remove specific repositories later from the same installation page.</p>
+                <p><strong>For organizations:</strong> Only admins can install or configure app access.</p>
+            </div>
+
+            <h3>How to Install the GitHub App</h3>
+            <ol class="step-list">
+                <li>Open this link in a new tab: <a href="https://github.com/organizations/SolidityPrism/settings/apps/solidity-prism-auditor/installations" target="_blank"><strong>Install Solidity Prism Auditor on your organization</strong></a></li>
+                <li>Select the repositories you want to grant access to:
+                    <ul>
+                        <li><strong>All repositories</strong> – The app will have access to all current and future repositories.</li>
+                        <li><strong>Only select repositories</strong> – Choose specific repositories manually.</li>
+                    </ul>
+                </li>
+                <li>Click <strong>Save</strong> to confirm the installation.</li>
+                <li>The app is now installed and ready to post audit results to Pull Requests.</li>
+            </ol>
+
+            <h3>Manage or Uninstall the GitHub App</h3>
+            <p>To modify which repositories have access, or to uninstall the app:</p>
+            <ol class="step-list">
+                <li>Open this link: <a href="https://github.com/organizations/SolidityPrism/settings/apps/solidity-prism-auditor/installations" target="_blank"><strong>Manage Solidity Prism Auditor Installation</strong></a></li>
+                <li>Click <strong>Configure</strong> next to the app.</li>
+                <li>Either:
+                    <ul>
+                        <li>Update the repository selection (add/remove specific repositories)</li>
+                        <li>Click <strong>Uninstall</strong> to remove the app entirely from your organization</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <hr>
+
+            <!-- Workflow Installation -->
+            <h2 id="workflow-installation">Workflow Installation</h2>
+            <p>After installing the GitHub App, you must add the GitHub Action workflow to each repository where you want to use Solidity Prism audits.</p>
+            <p>Getting started takes less than 5 minutes.</p>
+
+            <h3>Step 1: Create the Workflow File</h3>
+            <p>In your project's repository, create a new file at this path: <code>.github/workflows/solidity_prism.yml</code></p>
+
+            <h3>Step 2: Paste the Workflow Configuration</h3>
+            <p>Copy and paste the following code into the <code>solidity_prism.yml</code> file you just created:</p>
+
+            <div class="code-box">
+                <div class="code-header">
+                    <span class="code-lang">yaml</span>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                </div>
+                <pre><code># .github/workflows/solidity_prism.yml
+
+name: 'Solidity Prism Audit'
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  run-audit:
+    # This job only runs when a PR comment starts with "/audit"
+    if: github.event.issue.pull_request && startsWith(github.event.comment.body, '/audit')
+    permissions:
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Parse the command from the comment (e.g., /audit gas deep)
+      - name: Parse Command
+        id: parse_command
+        run: |
+          COMMENT="${{ github.event.comment.body }}"
+          AUDIT_TYPE=$(echo "$COMMENT" | awk '{print $2}')
+          if [ -z "$AUDIT_TYPE" ]; then AUDIT_TYPE="full"; fi
+          ANALYSIS_MODE=$(echo "$COMMENT" | awk '{print $3}')
+          if [ -z "$ANALYSIS_MODE" ]; then ANALYSIS_MODE="standard"; fi
+          echo "audit_type=$AUDIT_TYPE" >> $GITHUB_OUTPUT
+          echo "analysis_mode=$ANALYSIS_MODE" >> $GITHUB_OUTPUT
+
+      # Step 2: Get the exact code from the Pull Request
+      - name: Get PR's Head SHA
+        id: get_sha
+        run: |
+          PR_DATA=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" ${{ github.event.issue.pull_request.url }})
+          HEAD_SHA=$(echo $PR_DATA | jq -r '.head.sha')
+          echo "sha=$HEAD_SHA" >> $GITHUB_OUTPUT
+      
+      # Step 3: Trigger the Solidity Prism backend API
+      - name: Trigger Audit Backend
+        run: |
+          curl -X POST "https://audit.solidityprism.dev/api/v1/github-action-trigger" \
+          -H "Content-Type: application/json" \
+          -H "X-Action-Secret: ${{ secrets.PRISM_ACTION_SECRET }}" \
+          -d '{
+            "repository_id": "${{ github.event.repository.id }}",
+            "repository_name": "${{ github.event.repository.full_name }}",
+            "owner_id": "${{ github.event.repository.owner.id }}",
+            "repository_url": "${{ github.event.repository.git_url }}",
+            "pr_number": "${{ github.event.issue.number }}",
+            "commit_sha": "${{ steps.get_sha.outputs.sha }}",
+            "comments_url": "${{ github.event.issue.comments_url }}",
+            "github_token": "${{ github.token }}",
+            "audit_type": "${{ steps.parse_command.outputs.audit_type }}",
+            "analysis_mode": "${{ steps.parse_command.outputs.analysis_mode }}"
+          }'</code></pre>
+            </div>
+
+            <h3>Step 3: Activate Repository & Add Secret</h3>
+            <p>For the action to securely communicate with our backend, you need to activate your repository and add a secret to GitHub.</p>
+
+            <ol class="step-list">
+                <li>Log in to your account on <a href="https://solidityprism.dev/dashboard" target="_blank"><strong>solidityprism.dev/dashboard</strong></a></li>
+                <li>Find your repository in the list.
+                    <div class="blockquote">
+                        <strong>⚠️ Don't see your Organization's repositories?</strong>
+                        <p>If you are part of an organization, GitHub often restricts third-party access by default. To show your repositories:</p>
+                        <ol style="margin: 12px 0 0 20px;">
+                            <li>Go to your <strong>Personal GitHub Settings</strong> (click your avatar top-right > <strong>Settings</strong>).</li>
+                            <li>On the left sidebar, click <strong>Applications</strong> (at the bottom) > <strong>Authorized OAuth Apps</strong>.</li>
+                            <li>Click on <strong>Solidity Prism</strong>.</li>
+                            <li>Scroll down to the <strong>Organization access</strong> section.</li>
+                            <li>Click <strong>Grant</strong> (or <strong>Request</strong>) next to your organization's name.</li>
+                        </ol>
+                        <p style="margin-top: 12px;">Refresh your dashboard, and the repositories will appear.</p>
+                    </div>
+                </li>
+                <li>Click the <strong>Activate & Buy Credits</strong> button (if not already active).</li>
+                <li>Once the repository status is <strong>Active</strong>, click the purple <strong>Key</strong> button next to it.</li>
+                <li>Copy the displayed <code>PRISM_ACTION_SECRET</code>.</li>
+                <li>In your GitHub repository, go to <strong>Settings > Secrets and variables > Actions</strong>.</li>
+                <li>Click the <strong>New repository secret</strong> button.</li>
+                <li><strong>Name:</strong> <code>PRISM_ACTION_SECRET</code></li>
+                <li><strong>Value:</strong> Paste the key you copied.</li>
+            </ol>
+
+            <div class="note">
+                <strong>✓ That's it!</strong> Solidity Prism is now installed and ready to audit.
+            </div>
+
+            <hr>
+
+            <!-- Usage -->
+            <h2 id="usage">Usage</h2>
+            <p>To trigger an audit, go to any open Pull Request and post a comment with one of the following commands. You can also specify the analysis depth: <code>fast</code>, <code>standard</code> (default), or <code>deep</code>.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Command</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>/audit</code></td>
+                        <td>Runs a <strong>full</strong> audit (security + gas) in <strong>standard</strong> mode.</td>
+                    </tr>
+                    <tr>
+                        <td><code>/audit security</code></td>
+                        <td>Runs a <strong>security only</strong> audit in <strong>standard</strong> mode.</td>
+                    </tr>
+                    <tr>
+                        <td><code>/audit gas</code></td>
+                        <td>Runs a <strong>gas only</strong> audit in <strong>standard</strong> mode.</td>
+                    </tr>
+                    <tr>
+                        <td><code>/audit security deep</code></td>
+                        <td>Runs a <strong>security only</strong> audit in <strong>deep</strong> mode.</td>
+                    </tr>
+                    <tr>
+                        <td><code>/audit gas fast</code></td>
+                        <td>Runs a <strong>gas only</strong> audit in <strong>fast</strong> mode.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><em>The analysis depth always comes last in the command.</em></p>
+
+            <hr>
+
+            <!-- Uninstalling -->
+            <h2 id="uninstalling">Uninstalling</h2>
+
+            <h3>Removing the Workflow (Per Repository)</h3>
+            <p>If you want to stop using Solidity Prism audits in a specific repository:</p>
+            <ol class="step-list">
+                <li>In your repository, navigate to <code>.github/workflows/solidity_prism.yml</code></li>
+                <li>Delete this file and commit the change</li>
+                <li>This will immediately stop the action from running on future Pull Requests</li>
+            </ol>
+
+            <h3>Remove the Secret (Optional but Recommended)</h3>
+            <ol class="step-list">
+                <li>Go to your repository <strong>Settings → Secrets and variables → Actions</strong></li>
+                <li>Find <code>PRISM_ACTION_SECRET</code> in the list</li>
+                <li>Click the <strong>Remove</strong> button next to it</li>
+                <li>Confirm deletion</li>
+            </ol>
+
+            <h3>Deactivate Repository in Dashboard (Optional)</h3>
+            <ol class="step-list">
+                <li>Log in to your <strong>Solidity Prism Dashboard</strong> on <a href="https://solidityprism.dev/dashboard" target="_blank">solidityprism.dev/dashboard</a></li>
+                <li>Find the repository you want to deactivate</li>
+                <li>Click <strong>Deactivate</strong> or <strong>Remove</strong></li>
+            </ol>
+
+            <div class="note">
+                <strong>Note:</strong> Deleting the workflow file is sufficient to stop audits. The remaining steps ensure complete cleanup.
+            </div>
+
+            <h3>Uninstalling the GitHub App (Organization-Wide)</h3>
+            <p>To fully remove the Solidity Prism Auditor GitHub App from your organization or personal account:</p>
+            <ol class="step-list">
+                <li>Open this link: <a href="https://github.com/organizations/SolidityPrism/settings/apps/solidity-prism-auditor/installations" target="_blank"><strong>Manage Solidity Prism Auditor Installation</strong></a></li>
+                <li>Click <strong>Configure</strong> next to the app.</li>
+                <li>Choose to:
+                    <ul>
+                        <li>Remove access from specific repositories</li>
+                        <li>Click <strong>Uninstall</strong> to remove the app entirely</li>
+                    </ul>
+                </li>
+                <li>Confirm the action.</li>
+            </ol>
+
+            <p>After uninstalling, the app will no longer have access or be able to comment on Pull Requests in any repository.</p>
+
+            <hr>
+
+            <!-- Support -->
+            <h2 id="support">Support</h2>
+            <p>If you have any questions, encounter issues, or have a feature request, please <a href="https://github.com/SolidityPrism/documentation/issues" target="_blank">open an issue</a> in this repository.</p>
+
         </div>
 
-        <div class="error-box" id="errorBox">
-            <strong>⚠ Redirect didn't work?</strong>
-            <p style="margin-top: 8px;" id="errorMessage"></p>
-        </div>
-
-        <div class="button-group">
-            <button class="btn btn-primary" onclick="retryRedirect()" id="retryBtn" style="display: none;">
-                Click here to continue →
-            </button>
-            <a href="https://github.com/organizations/SolidityPrism/settings/apps/solidity-prism-auditor/installations" 
-               class="btn btn-secondary" 
-               onclick="trackClick(event)">
-                Open in current tab
-            </a>
-        </div>
-
-        <div class="timer">
-            <p>If you're not redirected in <span id="countdown">5</span> seconds, <a href="https://github.com/organizations/SolidityPrism/settings/apps/solidity-prism-auditor/installations">click here</a>.</p>
-        </div>
-
-        <div class="footer">
-            <p>Need help? Check out our <a href="https://github.com/SolidityPrism/documentation#github-app-installation">full installation guide</a></p>
-            <p style="margin-top: 10px;">Questions? <a href="https://github.com/SolidityPrism/documentation/issues">Open an issue</a></p>
-        </div>
+        <footer>
+            <p>&copy; 2025 Solidity Prism. All rights reserved.</p>
+        </footer>
     </div>
 
     <script>
-        const targetUrl = 'https://github.com/organizations/SolidityPrism/settings/apps/solidity-prism-auditor/installations';
-        let redirectAttempted = false;
-        let countdownValue = 5;
-
-        // Countdown timer
-        function startCountdown() {
-            const countdownElement = document.getElementById('countdown');
-            const interval = setInterval(() => {
-                countdownValue--;
-                countdownElement.textContent = countdownValue;
-                if (countdownValue <= 0) {
-                    clearInterval(interval);
-                }
-            }, 1000);
-        }
-
-        // Try to redirect immediately
-        function attemptRedirect() {
-            if (redirectAttempted) return;
-            redirectAttempted = true;
-
-            // Method 1: window.open (preferred for new tab)
-            const newWindow = window.open(targetUrl, '_blank');
+        function copyCode(button) {
+            const codeElement = button.closest('.code-box').querySelector('pre code');
+            const text = codeElement.innerText;
             
-            if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
-                // Popup blocked - show error and fallback button
-                showError('Popup blocked. Please click the button below or allow popups for GitHub.');
-                document.getElementById('retryBtn').style.display = 'block';
-                document.getElementById('status').textContent = 'Popup was blocked by your browser';
-            } else {
-                // Success - window opened
-                document.getElementById('status').textContent = '✓ GitHub app page is now open in a new tab';
-                document.getElementById('retryBtn').style.display = 'none';
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = button.innerText;
+                button.innerText = '✓ Copied!';
+                button.classList.add('copied');
                 
-                // Also redirect main window after 3 seconds as fallback
                 setTimeout(() => {
-                    if (document.hidden === false) {
-                        window.location.href = targetUrl;
-                    }
-                }, 3000);
-            }
+                    button.innerText = originalText;
+                    button.classList.remove('copied');
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+            });
         }
-
-        function retryRedirect() {
-            redirectAttempted = false;
-            attemptRedirect();
-        }
-
-        function trackClick(event) {
-            console.log('User opened link in current tab');
-        }
-
-        function showError(message) {
-            const errorBox = document.getElementById('errorBox');
-            const errorMessage = document.getElementById('errorMessage');
-            errorMessage.textContent = message;
-            errorBox.style.display = 'block';
-        }
-
-        // Start countdown immediately
-        startCountdown();
-
-        // Attempt redirect on page load
-        window.addEventListener('load', () => {
-            // Small delay to ensure page is fully rendered
-            setTimeout(attemptRedirect, 500);
-        });
-
-        // Also try immediately in case load event already fired
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', attemptRedirect);
-        } else {
-            attemptRedirect();
-        }
-
-        // Track page visibility
-        document.addEventListener('visibilitychange', () => {
-            if (document.hidden) {
-                document.getElementById('status').textContent = 'Tab is now inactive';
-            } else {
-                document.getElementById('status').textContent = 'Welcome back!';
-            }
-        });
     </script>
 </body>
 </html>
