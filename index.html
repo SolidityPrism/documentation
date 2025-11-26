@@ -233,47 +233,47 @@
             background: #334155;
         }
 
-        .blockquote {
-            background: #1e3a5f;
-            border-left: 4px solid #60a5fa;
-            padding: 18px 20px;
-            margin: 20px 0;
-            border-radius: 4px;
-            color: #bfdbfe;
-        }
+.blockquote {
+    background: #1e3a5f;
+    border-left: 4px solid #60a5fa;
+    padding: 20px 24px;
+    margin: 20px 0;
+    border-radius: 6px;
+    color: #bfdbfe;
+}
 
-        .blockquote strong {
-            display: block;
-            margin-bottom: 12px;
-            color: #93c5fd;
-            font-size: 15px;
-        }
+.blockquote strong {
+    display: block;
+    margin-bottom: 15px;
+    color: #93c5fd;
+    font-size: 15px;
+    font-weight: 600;
+}
 
-        .blockquote p {
-            color: #bfdbfe;
-            margin: 8px 0;
-            font-size: 14px;
-        }
+.blockquote > p {
+    margin: 12px 0;
+    font-size: 14px;
+    line-height: 1.7;
+}
 
-        .blockquote ol, .blockquote ul {
-            margin: 12px 0 0 20px;
-            color: #bfdbfe;
-        }
+.blockquote ol {
+    margin: 15px 0 15px 22px;
+    padding: 0;
+}
 
-        .blockquote li {
-            font-size: 14px;
-            margin-bottom: 6px;
-        }
+.blockquote ol li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #bfdbfe;
+}
 
-        .blockquote ol li {
-            margin-bottom: 10px;
-            line-height: 1.7;
-            color: #bfdbfe;
-        }
-        
-        .blockquote ol li strong {
-            color: #93c5fd;
-        }
+.blockquote ol li strong {
+    display: inline;
+    margin: 0;
+    color: #93c5fd;
+}
+
         
         .note {
             background: #1b4332;
@@ -524,18 +524,18 @@ jobs:
             <ol class="step-list">
                 <li>Log in to your account on <a href="https://solidityprism.dev/dashboard" target="_blank"><strong>solidityprism.dev/dashboard</strong></a></li>
                 <li>Find your repository in the list.
-                    <div class="blockquote">
-                        <strong>⚠️ Don't see your Organization's repositories?</strong>
-                        <p>If you are part of an organization, GitHub often restricts third-party access by default. To show your repositories:</p>
-                        <ol style="margin: 12px 0 0 20px;">
-                            <li>Go to your <strong>Personal GitHub Settings</strong> (click your avatar top-right > <strong>Settings</strong>).</li>
-                            <li>On the left sidebar, click <strong>Applications</strong> (at the bottom) > <strong>Authorized OAuth Apps</strong>.</li>
-                            <li>Click on <strong>Solidity Prism</strong>.</li>
-                            <li>Scroll down to the <strong>Organization access</strong> section.</li>
-                            <li>Click <strong>Grant</strong> (or <strong>Request</strong>) next to your organization's name.</li>
-                        </ol>
-                        <p style="margin-top: 12px;">Refresh your dashboard, and the repositories will appear.</p>
-                    </div>
+<div class="blockquote">
+    <strong>⚠️ Don't see your Organization's repositories?</strong>
+    <p>If you are part of an organization, GitHub often restricts third-party access by default. To show your repositories:</p>
+    <ol>
+        <li>Go to your <strong>Personal GitHub Settings</strong> (click your avatar top-right > <strong>Settings</strong>)</li>
+        <li>On the left sidebar, click <strong>Applications</strong> (at the bottom) > <strong>Authorized OAuth Apps</strong></li>
+        <li>Click on <strong>Solidity Prism</strong></li>
+        <li>Scroll down to the <strong>Organization access</strong> section</li>
+        <li>Click <strong>Grant</strong> (or <strong>Request</strong>) next to your organization's name</li>
+    </ol>
+    <p>Refresh your dashboard, and the repositories will appear.</p>
+</div>
                 </li>
                 <li>Click the <strong>Activate & Buy Credits</strong> button (if not already active).</li>
                 <li>Once the repository status is <strong>Active</strong>, click the purple <strong>Key</strong> button next to it.</li>
@@ -671,5 +671,6 @@ jobs:
     </script>
 </body>
 </html>
+
 
 
