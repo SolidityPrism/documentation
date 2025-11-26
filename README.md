@@ -35,6 +35,9 @@ Once triggered, the action sends your code to our secure backend for analysis an
 > **For organizations:** Only admins can install or configure app access.
 
 ### How to Install the GitHub App
+<a href="https://github.com/organizations/SolidityPrism/settings/apps/solidity-prism-auditor/installations">
+  <img src="https://img.shields.io/badge/Install%20App-blue?style=for-the-badge" alt="Install Solidity Prism Auditor">
+</a>
 
 1. Open this link in a new tab:  
    <a href="https://github.com/organizations/SolidityPrism/settings/apps/solidity-prism-auditor/installations" target="_blank">Install Solidity Prism Auditor on your organization</a>
