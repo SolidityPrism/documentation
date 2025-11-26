@@ -37,7 +37,7 @@ Once triggered, the action sends your code to our secure backend for analysis an
 ### How to Install the GitHub App
 
 1. Open this link in a new tab:  
-   [Install Solidity Prism Auditor on your organization](https://github.com/organizations/SolidityPrism/settings/apps/solidity-prism-auditor/installations){:target="_blank"}
+   <a href="https://github.com/organizations/SolidityPrism/settings/apps/solidity-prism-auditor/installations" target="_blank">Install Solidity Prism Auditor on your organization</a>
 2. Select the repositories you want to grant access to:
    - **All repositories** – The app will have access to all current and future repositories.
    - **Only select repositories** – Choose specific repositories manually.
@@ -46,14 +46,12 @@ Once triggered, the action sends your code to our secure backend for analysis an
 
 **Example screenshot:**
 
-
-
-### Manage or Uninstall the GitHub App
+![App install and repo selection](image Uninstall the GitHub App
 
 To modify which repositories have access, or to uninstall the app:
 
 1. Open this link:  
-   [Manage Solidity Prism Auditor Installation](https://github.com/organizations/SolidityPrism/settings/apps/solidity-prism-auditor/installations){:target="_blank"}
+   <a href="https://github.com/organizations/SolidityPrism/settings/apps/solidity-prism-auditor/installations" target="_blank">Manage Solidity Prism Auditor Installation</a>
 2. Click **Configure** next to the app.
 3. Either:
    - Update the repository selection (add/remove specific repositories)
@@ -136,7 +134,7 @@ jobs:
 
 For the action to securely communicate with our backend, you need to activate your repository and add a secret to GitHub.
 
-1. Log in to your account on **[solidityprism.dev/dashboard](https://solidityprism.dev/dashboard){:target="_blank"}**
+1. Log in to your account on <a href="https://solidityprism.dev/dashboard" target="_blank">**solidityprism.dev/dashboard**</a>
 2. Find your repository in the list.
 
 > **⚠️ Don't see your Organization's repositories?**
@@ -198,7 +196,7 @@ If you want to stop using Solidity Prism audits in a specific repository:
 
 ### Deactivate Repository in Dashboard (Optional)
 
-1. Log in to your **Solidity Prism Dashboard** on [solidityprism.dev/dashboard](https://solidityprism.dev/dashboard){:target="_blank"}
+1. Log in to your **Solidity Prism Dashboard** on <a href="https://solidityprism.dev/dashboard" target="_blank">solidityprism.dev/dashboard</a>
 2. Find the repository you want to deactivate
 3. Click **Deactivate** or **Remove**
 
@@ -211,7 +209,7 @@ If you want to stop using Solidity Prism audits in a specific repository:
 To fully remove the Solidity Prism Auditor GitHub App from your organization or personal account:
 
 1. Open this link:  
-   [Manage Solidity Prism Auditor Installation](https://github.com/organizations/SolidityPrism/settings/apps/solidity-prism-auditor/installations){:target="_blank"}
+   <a href="https://github.com/organizations/SolidityPrism/settings/apps/solidity-prism-auditor/installations" target="_blank">Manage Solidity Prism Auditor Installation</a>
 2. Click **Configure** next to the app.
 3. Choose to:
    - Remove access from specific repositories
