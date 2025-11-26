@@ -39,6 +39,11 @@ Once triggered, the action sends your code to our secure backend for analysis an
   <img src="https://img.shields.io/badge/Install%20App-blue?style=for-the-badge" alt="Install Solidity Prism Auditor">
 </a>
 
+<button onclick="window.open('https://github.com/organizations/SolidityPrism/settings/apps/solidity-prism-auditor/installations', '_blank')">
+  Install Solidity Prism Auditor on your organization
+</button>
+
+
 1. Open this link in a new tab:  
    <a href="https://github.com/organizations/SolidityPrism/settings/apps/solidity-prism-auditor/installations" target="_blank">Install Solidity Prism Auditor on your organization</a>
 2. Select the repositories you want to grant access to:
