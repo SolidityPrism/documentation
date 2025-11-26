@@ -483,7 +483,7 @@ jobs:
     # This job only runs when a PR comment starts with "/audit"
     if: github.event.issue.pull_request && startsWith(github.event.comment.body, '/audit')
     permissions:
-      pull-requests: write
+      pull-requests: write    
     runs-on: ubuntu-latest
     steps:
       # Step 1: Parse the command from the comment (e.g., /audit gas deep)
@@ -505,21 +505,8 @@ jobs:
           PR_DATA=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" ${{ github.event.issue.pull_request.url }})
           HEAD_SHA=$(echo $PR_DATA | jq -r '.head.sha')
           echo "sha=$HEAD_SHA" >> $GITHUB_OUTPUT
-
-      # Step 3: Get the Installation ID automatically
-      - name: Get Installation ID
-        id: get_installation
-        run: |
-          INSTALLATION_ID=$(curl -s \
-            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-            -H "Accept: application/vnd.github+json" \
-            -H "X-GitHub-Api-Version: 2022-11-28" \
-            "https://api.github.com/repos/${{ github.repository }}/installation" \
-            | jq -r '.id')
-          echo "installation_id=$INSTALLATION_ID" >> $GITHUB_OUTPUT
-          echo "Installation ID retrieved: $INSTALLATION_ID"
-
-      # Step 4: Trigger the Solidity Prism backend API
+      
+      # Step 3: Trigger the Solidity Prism backend API
       - name: Trigger Audit Backend
         run: |
           curl -X POST "https://audit.solidityprism.dev/api/v1/github-action-trigger" \
@@ -528,16 +515,15 @@ jobs:
           -d '{
             "repository_id": "${{ github.event.repository.id }}",
             "repository_name": "${{ github.event.repository.full_name }}",
-            "owner_id": "${{ github.event.repository.owner.id }}",
+            "owner_id": "${{ github.event.repository.owner.id }}",            
             "repository_url": "${{ github.event.repository.git_url }}",
             "pr_number": "${{ github.event.issue.number }}",
             "commit_sha": "${{ steps.get_sha.outputs.sha }}",
             "comments_url": "${{ github.event.issue.comments_url }}",
             "github_token": "${{ github.token }}",
-            "installation_id": "${{ steps.get_installation.outputs.installation_id }}",
             "audit_type": "${{ steps.parse_command.outputs.audit_type }}",
             "analysis_mode": "${{ steps.parse_command.outputs.analysis_mode }}"
-          }'    
+          }'   
 </code></pre>
             </div>
 
@@ -694,6 +680,7 @@ jobs:
     </script>
 </body>
 </html>
+
 
 
 
