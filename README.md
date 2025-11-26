@@ -7,9 +7,11 @@ Welcome to the official documentation for Solidity Prism. Here you will find eve
 ### Table of Contents
 1. [How It Works](#how-it-works)
 2. [Installation](#installation)
-3. [Usage](#usage)
-4. [Uninstalling](#uninstalling)
-5. [Support](#support)
+3. [App Installation](#app-installation)
+4. [Usage](#usage)
+5. [Uninstalling](#uninstalling)
+6. [Uninstalling the App](#uninstalling-the-app)
+7. [Support](#support)
 
 ---
 
@@ -33,7 +35,7 @@ In your project's repository, create a new file in the following path: `.github/
 
 Copy and paste the following code into the `solidity_prism.yml` file you just created:
 
-```yaml
+```
 # .github/workflows/solidity_prism.yml
 
 name: 'Solidity Prism Audit'
@@ -118,6 +120,28 @@ For the action to securely communicate with our backend, you need to activate yo
 
 That's it! Solidity Prism is now installed and ready to audit.
 
+---
+
+## App Installation
+
+Solidity Prism Auditor is a GitHub App and must be installed on your repository to enable automated commenting on Pull Requests.
+
+### How to Install the GitHub App
+
+1. Go to the public app page:  
+   [Solidity Prism Auditor GitHub App](https://github.com/apps/solidity-prism-auditor)
+2. Click the **Install** button.
+3. Choose **All repositories** or **Only select repositories** to grant access.
+4. Confirm by clicking **Save**.
+5. After installing, the app will be able to post results to PR comments automatically.
+
+**Tip:** You can manage which repositories the app has access to at any time in [your GitHub App installations](https://github.com/settings/installations).
+
+**Example screenshot:**
+![Screenshot: App install and repo selection](image.jpg)
+
+---
+
 ## Usage
 
 To trigger an audit, go to any open Pull Request and post a comment with one of the following commands. You can also specify the analysis depth: `fast`, `standard` (default), or `deep`.
@@ -131,6 +155,8 @@ To trigger an audit, go to any open Pull Request and post a comment with one of 
 | `/audit gas fast`       | Runs a **gas only** audit in **fast** mode.                  |
 
 The analysis depth always comes last in the command.
+
+---
 
 ## Uninstalling
 
@@ -156,6 +182,22 @@ If you want to stop using Solidity Prism or revoke its access to your repository
 3. Click **Deactivate** or **Remove**
 
 **Note:** Deleting the workflow file is sufficient to stop audits. The remaining steps ensure complete cleanup.
+
+---
+
+## Uninstalling the GitHub App
+
+To fully remove the Solidity Prism Auditor GitHub App from your repository or organization:
+
+1. Visit [GitHub App installations](https://github.com/settings/installations).
+2. Find **Solidity Prism Auditor** in the list.
+3. Click **Configure** next to the app.
+4. Choose to remove from all repositories or only selected repositories.
+5. Click **Uninstall** to confirm.
+
+After this, the app will no longer have access or be able to comment on Pull Requests in those repositories.
+
+---
 
 ## Support
 
